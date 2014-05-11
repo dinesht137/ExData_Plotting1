@@ -11,9 +11,9 @@ z<-cbind.data.frame(m,c)
  sm1<-z[,7]
  sm2<-z[,8]
  sm3<-z[,9]
-with(z,plot(z$b,sm1,col="black",type="l",xlab="",ylab="Energy sub metering"))
-with(subset(z,colnames(z)=="Sub_metering_2"),points(z$b,sm2,col="red",type="l"))
-with(subset(z,colnames(z)=="Sub_metering_3"),points(z$b,sm3,col="blue",type="l"))
+with(z,plot(z$c,sm1,col="black",type="l",xlab="",ylab="Energy sub metering"))
+with(subset(z,colnames(z)=="Sub_metering_2"),points(z$c,sm2,col="red",type="l"))
+with(subset(z,colnames(z)=="Sub_metering_3"),points(z$c,sm3,col="blue",type="l"))
 legend("topright",lwd=1,col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
 dev.copy(png,file="plot3.png")
